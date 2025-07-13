@@ -168,7 +168,7 @@ export default function Products() {
       <Navbar />
 
       <div className="products-container" style={{ padding: '2rem 1rem' }}>
-        <h2 style={{ textAlign: 'center', marginBottom: '1.5rem' }}></h2>
+        
 
         {/* Controls */}
         <div className="controls" style={{
