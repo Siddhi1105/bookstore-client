@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useAuth } from '../AuthContext';
+import Navbar from './Navbar';
 // import dotenv from 'dotenv';
 import '../App.css';
 
@@ -27,18 +28,21 @@ fetch(`${base_url}/products`, {
 
 
   return (
+<>
+<Navbar/>
 <div className="product-grid">
   {products.map(p => (
     <div className="product-card" key={p._id}>
       <img src={p.image} alt={p.name} className="product-image" />
       <div className="product-info">
-        <h3>{p.name}</h3>
+        <h3>{p.title}</h3>
         <p className="product-description">{p.description}</p>
         <p className="product-price">₹{p.price}</p>
       </div>
     </div>
   ))}
 </div>
+</>
   );
 }
 
