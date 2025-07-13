@@ -148,6 +148,7 @@ import { useNavigate } from 'react-router-dom';
 // ✅ Use .env variable for base URL
 const base_url = process.env.REACT_APP_BASE_URL;
 
+
 function Register() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
