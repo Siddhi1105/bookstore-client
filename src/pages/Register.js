@@ -146,7 +146,7 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
 // ✅ Use .env variable for base URL
-const base_url = process.env.REACT_APP_BASE_URL;
+/* const base_url = process.env.REACT_APP_BASE_URL; */
 
 
 function Register() {
@@ -159,6 +159,7 @@ function Register() {
     e.preventDefault();
 
     try {
+      const base_url = "https://bookstore-server-roni.onrender.com"
       const res = await axios.post(`${base_url}/auth/register`, {
         name,
         email,
@@ -174,7 +175,7 @@ function Register() {
       alert("✅ Registration successful!");
       navigate('/login');
     } catch (err) {
-      console.error("❌ Registration error:", err.response?.data || err.message);
+     // console.error("❌ Registration error:", err.response?.data || err.message);
       alert("Registration failed: " + (err.response?.data || err.message));
     }
   };

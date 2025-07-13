@@ -67,7 +67,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../AuthContext";
-import base_url from "../config"; 
+/* import base_url from "../config";  */
 import "../App.css";
 
 function Login() {
@@ -79,9 +79,9 @@ function Login() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      console.log("Base URL:", base_url);
+      // console.log("Base URL:", base_url);
       
-
+      const base_url = "https://bookstore-server-roni.onrender.com"
       const res = await axios.post(`${base_url}/auth/login`, {
         email,
         password
