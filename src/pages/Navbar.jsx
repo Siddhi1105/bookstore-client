@@ -8,9 +8,13 @@ const Navbar = () => {
   const navigate = useNavigate();
 
   const handleLogout = () => {
-    logout();       
+    logout();       // clear token
     navigate("/");  
   };
+
+  const wishilistbutton = () => {
+          navigate("/wishlist")
+  }
 
   return (
     <nav className="navbar">
@@ -21,6 +25,11 @@ const Navbar = () => {
         <Link to="/products">Products</Link>
         <button onClick={handleLogout} className="logout-btn">Logout</button>
       </div>
+      <div className="navbar-links">
+        
+        <button onClick={wishilistbutton} className="logout-btn">Wishlist</button>
+      </div>
+
     </nav>
   );
 };
