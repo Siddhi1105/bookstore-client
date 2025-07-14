@@ -51,7 +51,7 @@
 
 /* Register */
 
-/* Full page container with blurred background */
+
 .auth-form-container {
   height: 100vh;
   width: 100%;
@@ -67,7 +67,7 @@
   overflow: hidden;
 }
 
-/* Blur overlay */
+
 .auth-form-container::before {
   content: "";
   position: absolute;
@@ -77,7 +77,6 @@
   z-index: 0;
 }
 
-/* Registration card */
 .auth-form-box {
   z-index: 1;
   background-color: #ffffff;
@@ -92,7 +91,7 @@
   animation: fadeInUp 0.6s ease-in-out;
 }
 
-/* Fade in animation */
+
 @keyframes fadeInUp {
   from {
     transform: translateY(20px);
@@ -175,7 +174,6 @@
 
 /* Carts */
 
-/* Container for product grid */
 .product-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -186,7 +184,7 @@
   box-sizing: border-box;
 }
 
-/* Each product card */
+
 .product-card {
   background-color: #fff;
   border-radius: 14px;
@@ -302,7 +300,6 @@ body {
   background-color: #ffe2b6;
 }
 
-/* ==================== PRODUCT GRID ===================== */
 .products-container {
   max-width: 1200px;
   margin: auto;
