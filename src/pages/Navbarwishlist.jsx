@@ -3,13 +3,13 @@ import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../AuthContext";
 
 
-const Navbar = () => {
+const Navbarwishlist = () => {
   const { logout } = useAuth();
   const navigate = useNavigate();
 
   const handleLogout = () => {
     logout();       
-    navigate("/");  
+    navigate("/wishlist");  
   };
 
   const wishilistbutton = () => {
@@ -19,7 +19,7 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="navbar-brand">
-        <Link to="/">BookStore</Link>
+        <Link to="/">Wishlist</Link>
       </div>
       <div className="navbar-links">
         <Link to="/products">Products</Link>
@@ -34,4 +34,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default Navbarwishlist;

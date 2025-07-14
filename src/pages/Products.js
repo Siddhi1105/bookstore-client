@@ -46,44 +46,7 @@ fetch(`${base_url}/products`, {
   );
 }
  */
-// import React, { useEffect, useState } from 'react';
-// import { useAuth } from '../AuthContext';
-// import base_url from '../config'; // ✅
-// import '../App.css';
 
-// export default function Products() {
-//   const [products, setProducts] = useState([]);
-//   const { token } = useAuth();
-
-//   useEffect(() => {
-//     console.log("Base URL:", base_url);
-//     fetch(`${base_url}/products`, {
-//       headers: {
-//         Authorization: `Bearer ${token}`
-//       }
-//     })
-//       .then(res => res.json())
-//       .then(data => {
-//         console.log("Products fetched:", data);
-//         setProducts(Array.isArray(data) ? data : []);
-//       });
-//   }, [token]);
-
-//   return (
-//     <div className="product-grid">
-//       {products.map(p => (
-//         <div className="product-card" key={p._id}>
-//           <img src={p.image} alt={p.name} className="product-image" />
-//           <div className="product-info">
-//             <h3>{p.name}</h3>
-//             <p className="product-description">{p.description}</p>
-//             <p className="product-price">₹{p.price}</p>
-//           </div>
-//         </div>
-//       ))}
-//     </div>
-//   );
-// }
 
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
@@ -101,7 +64,7 @@ export default function Products() {
   const { token } = useAuth();
   const baseurl = "https://bookstore-server-roni.onrender.com";
 
-  // Fetch products
+  
   useEffect(() => {
     if (!token) return;
 
@@ -117,7 +80,7 @@ export default function Products() {
       });
   }, [token]);
 
-  // Apply search/filter/sort
+ 
   useEffect(() => {
     let updated = [...products];
 
@@ -170,7 +133,7 @@ export default function Products() {
       <div className="products-container" style={{ padding: '2rem 1rem' }}>
         
 
-        {/* Controls */}
+        
         <div className="controls" style={{
           display: 'flex',
           flexWrap: 'wrap',
@@ -201,7 +164,7 @@ export default function Products() {
           </select>
         </div>
 
-        {/* Product Grid */}
+       
         <div className="product-grid">
           {filtered.length > 0 ? (
             filtered.map(p => (

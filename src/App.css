@@ -211,7 +211,7 @@
   background-color: #f9f9f9;
   padding: 10px;
 }
-/* Product info */
+
 .product-info {
   padding: 16px 20px;
   flex: 1;
@@ -243,14 +243,14 @@
 
 /* Navbar */
 
-/* ==================== GLOBAL ===================== */
+
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
   background-color: #f7f8fa;
 }
 
-/* ==================== NAVBAR ===================== */
+
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -316,7 +316,7 @@ body {
   padding: 20px 0;
 }
 
-/* ==================== PRODUCT CARD ===================== */
+
 .product-card {
   display: flex;
   flex-direction: column;
@@ -326,7 +326,8 @@ body {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   overflow: hidden;
-  height: 100%; /* NEW: stretch all cards equally */
+    width: 250px;
+     height: 450px; 
 }
 
 .product-card:hover {
@@ -337,14 +338,14 @@ body {
 
 .product-image {
   width: 100%;
-  height: 250px; /* fixed height for image box */
+  height: 250px; 
   object-fit: contain;
   background-color: #f9f9f9;
   padding: 10px;
 }
 
 
-/* ==================== PRODUCT INFO ===================== */
+
 .product-info {
   padding: 16px 20px;
   display: flex;
@@ -373,7 +374,6 @@ body {
   margin-top: 8px;
 }
 
-/* ==================== BUTTON ===================== */
 .wishlist-btn {
   margin-top: 12px;
   background-color: #fca311;
@@ -390,7 +390,6 @@ body {
   background-color: #e78e00;
 }
 
-/* ==================== FILTER/SEARCH CONTROLS ===================== */
 .controls input,
 .controls select {
   padding: 10px 14px;
@@ -480,7 +479,7 @@ body {
 
 /* Wishlist */
 
-/* Grid Layout */
+
 .product-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -490,8 +489,8 @@ body {
   box-sizing: border-box;
 }
 
-/* Product Card */
-.product-card {
+
+/* .product-card {
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -500,7 +499,7 @@ body {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   transition: transform 0.3s ease;
-}
+} */
 
 .product-card:hover {
   transform: translateY(-5px);
@@ -547,7 +546,7 @@ body {
   margin-bottom: 12px;
 }
 
-/* Remove Button */
+
 .wishlist-remove-btn {
   padding: 8px 12px;
   background-color: #ff4d4d;
@@ -562,7 +561,7 @@ body {
 }
 
 .wishlist-remove-btn:hover {
-  background-color: #d40000;
+  background-color: #d42e00;
 }
 
 

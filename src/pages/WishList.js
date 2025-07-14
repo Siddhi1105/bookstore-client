@@ -27,38 +27,13 @@ export default function Wishlist() {
   );
 } */
 
-/* import React, { useEffect, useState } from 'react';
-import { useAuth } from '../AuthContext';
-import base_url from '../config'; // ✅
 
-export default function Wishlist() {
-  const [wishlist, setWishlist] = useState([]);
-  const { token } = useAuth();
-
-  useEffect(() => {
-    console.log("Base URL:", base_url);
-    fetch(`${base_url}/wishlist`, {
-      headers: { Authorization: token }
-    })
-      .then((res) => res.json())
-      .then(setWishlist);
-  }, [token]);
-
-  return (
-    <div>
-      <h2>Wishlist</h2>
-      <ul>
-        {wishlist.map(p => (
-          <li key={p._id}>{p.name}</li>
-        ))}
-      </ul>
-    </div>
-  );
-} */
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useAuth } from '../AuthContext';
 import '../App.css';
+import Navbarwishlist from './Navbarwishlist';
+
 
 function Wishlist() {
   const [wishlistItems, setWishlistItems] = useState([]);
@@ -79,14 +54,14 @@ function Wishlist() {
     });
   }, [token]);
 
-  // DELETE handler
+
   const removeFromWishlist = async (productId) => {
     try {
       await axios.delete(`${baseurl}/wishlist/${productId}`, {
         headers: { Authorization: `Bearer ${token}` }
       });
 
-      // Remove from UI
+     
       setWishlistItems(prev => prev.filter(item => item._id !== productId));
     } catch (err) {
       console.error("Error deleting from wishlist:", err.response?.data || err.message);
@@ -95,9 +70,10 @@ function Wishlist() {
   };
 
   return (
-    <div className="products-container">
-      <h2>My Wishlist</h2>
-
+    <> 
+    <Navbarwishlist/>
+     <div className="products-container">
+    
      <div className="product-grid">
   {wishlistItems.length > 0 ? (
     wishlistItems.map((item) => (
@@ -122,6 +98,8 @@ function Wishlist() {
 </div>
 
     </div>
+    </>
+
   );
 }
 
